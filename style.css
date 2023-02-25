@@ -1,0 +1,89 @@
+ol {
+  list-style-type: none;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background-color: #b3e8e5;
+  padding-left: 10px;
+  padding-right: 10px; 
+  background-image: linear-gradient(#b3e8e5, #ffffff);
+}
+
+.jumbotron h1 {
+  font-weight: bold;
+}
+
+.jumbotron a:hover {
+  color: #000000;
+}
+
+.jumbotron a {
+  text-decoration: none;
+  color: blue;
+}
+.jumbotron p {
+  font-size: large;
+  font-weight: 400;
+}
+
+.tentang {
+  padding-top: 4rem;
+}
+
+.pendidikan {
+  padding-top: 4rem;
+  background-color: #e8f9fd;
+  background-image: linear-gradient(#e8f9fd, #ffffff);
+  
+}
+
+.pengalaman {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  background-color: #3bacb6;
+  background-image: linear-gradient(#3bacb6, #3bacb6);
+}
+
+.projek {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  background-color: #82dbd8;
+}
+
+.skill {
+  padding-top: 4rem;
+  background-color: #82dbd8;
+  background-image: linear-gradient(#82dbd8, #ffffff);
+}
+
+.sosmed {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  background-color: #e8f9fd;
+  background-image: linear-gradient(#ffffff, #82dbd8);
+}
+
+.kontak {
+  padding-top: 4rem;
+  background-color: #82dbd8;
+  background-image: linear-gradient(#82dbd8, #ffffff);
+}
+
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #2f8f9d;
+}
+
+.footer a:hover {
+  color: #000000;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
