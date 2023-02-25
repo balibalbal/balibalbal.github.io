@@ -1,24 +1,733 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Demo API Kopikuka</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Ambali</title>
   </head>
   <body>
-    
-	<?php
-	$url = 'https://toko.kukakuku.com/api/products';
-	$isi = file_get_contents($url);
-	$buat_array = json_decode($isi, true);
-	?>
-	
-	<div class="container">
-		<h1>Data Product</h1>
-		
-	</div>
-	
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top" style="background-color: #2f8f9d">
+      <div class="container">
+        <a class="navbar-brand" href="https://ambali.kukakuku.com/">
+          <img src="img/logo-ambali.png" alt="" width="30" height="24" class="d-inline-block align-text-top" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pendidikan">Pendidikan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pengalaman">Pengalaman Kerja</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skill">Keahlian</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sosmed">Media Sosial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- jumbotron -->
+    <section class="jumbotron text-center">
+      <img src="img/ambali.png" alt="foto-ambali" width="300" class="rounded-circle img-thumbnail" /><br /><br />
+      <h1>AMBALI</h1>
+      <br />
+      <p>
+        Chanel Marketplace Supervisor<br />Ecommerce Operational<br />
+        Blogger di <a href="https://kukakuku.com/" target="_blank"><b>www.kukakuku.com</b></a>
+      </p>
+    </section>
+    <!-- akhir jumbotron -->
+
+    <!-- tentang -->
+    <section id="tentang" class="tentang">
+      <div class="container">
+        <div class="row text-center mb-5 mt-5">
+          <div class="col">
+            <h2>Tentang Saya</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <p>
+              Saya lulusan Teknik Informatika tahun 2013. Mempunyai pengalaman kerja diberbagai bidang dari tahun 2004. Pengalaman kerja terakhir saya di dunia ecommerce bagian operasional di www.ibox.co.id dan Chanel Marketplace Supervisor
+              dari tahun 2017 hingga 2022. Membangun platform ecommerce sebagai media untuk memasarkan produk-produk Apple melalui digital sesuai perkembangan market Indonesia.
+            </p>
+            <p>
+              Saya menyukai dunia IT, fashion, update media sosial dan juga hobi menulis dan berbagi informasi di website pribadi saya. Memiliki kepribadian yang tidak mudah menyerah dan semangat belajar yang tidak pernah berhenti mengasah
+              skill dan terus melakukan pengembangan diri.
+            </p>
+            <p>Kegiatan saya saat ini hanya mengikuti kursus-kursus online dan tidak sedang terikat kontrak kerja. Saya siap untuk bergabung secepatnya sesuai kebutuhan perusahaan.</p>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e8f9fd"
+          fill-opacity="1"
+          d="M0,128L40,149.3C80,171,160,213,240,208C320,203,400,149,480,117.3C560,85,640,75,720,85.3C800,96,880,128,960,133.3C1040,139,1120,117,1200,117.3C1280,117,1360,139,1400,149.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir tentang -->
+
+    <!-- pendidikan -->
+    <section id="pendidikan" class="pendidikan">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Pendidikan</h2>
+            <br />
+            <br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4>a. Pendidikan Formal</h4>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Pendidikan</th>
+                  <th scope="col">Sekolah</th>
+                  <th scope="col">Alamat</th>
+                  <th scope="col">Lulus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>S1 - Teknik Informatika</td>
+                  <td>Universitas Pamulang (UNPAM)</td>
+                  <td>Banten</td>
+                  <td>2013</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>D1 - Manajemen Informatika</td>
+                  <td>Bina Putra Mandiri</td>
+                  <td>Bogor</td>
+                  <td>2006</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>SMK - Teknik Mekanik Otomotif</td>
+                  <td>SMK Setia Budhi Rangkasbitung</td>
+                  <td>Banten</td>
+                  <td>2004</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Sekolah Menengah Pertama</td>
+                  <td>SMP Negeri 1 Parung Panjang</td>
+                  <td>Bogor</td>
+                  <td>2001</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Sekolah Dasar</td>
+                  <td>SD Negeri Lumpang 1</td>
+                  <td>Bogor</td>
+                  <td>1998</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <br />
+            <h4>b. Pendidikan Non Formal</h4>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nama Kursus</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Sertifikat</th>
+                  <th scope="col">Tahun</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mastering Blender 3D: Character Set Design and 3D Illustration</td>
+                  <td>Selesai</td>
+                  <td>Ya</td>
+                  <td>2022</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Full-Stack Web Developer: Web Travel (Laravel, Bootstrap, MySQL)</td>
+                  <td>Selesai</td>
+                  <td>Ya</td>
+                  <td>2022</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Full-Stack Web Developer: Toko Online (Laravel, Bootstrap, MySQL)</td>
+                  <td>Masih berjalan</td>
+                  <td>-</td>
+                  <td>2022</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>English for Freelancer: Meetings</td>
+                  <td>Masih berjalan</td>
+                  <td>-</td>
+                  <td>2022</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#82dbd8"
+          fill-opacity="1"
+          d="M0,128L80,154.7C160,181,320,235,480,234.7C640,235,800,181,960,165.3C1120,149,1280,171,1360,181.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir pendidikan -->
+
+    <!-- skill -->
+    <section id="skill" class="skill">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Keahlian</h2>
+          </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-xs-6 col-sm-6 col-md-3 text-end">
+            <ol>
+              <li>HTML <i class="bi bi-filetype-html"></i></li>
+              <li>PHP <i class="bi bi-filetype-php"></i></li>
+              <li>Bootstrap <i class="bi bi-bootstrap-fill"></i></li>
+              <li>Java Script <i class="bi bi-filetype-java"></i></li>
+              <li>Wordpress <i class="bi bi-wordpress"></i></li>
+              <li>Magento <i class="bi bi-shop"></i></li>
+            </ol>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-3 text-start">
+            <ol>
+              <li><i class="bi bi-image-fill"></i> Photoshop</li>
+              <li><i class="bi bi-file-earmark-word-fill"></i> Microsoft Word</li>
+              <li><i class="bi bi-file-earmark-excel-fill"></i> Microsoft Excel</li>
+              <li><i class="bi bi-badge-3d-fill"></i> Blender 3D</li>
+              <li><i class="bi bi-image-fill"></i> Canva Design</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#3bacb6"
+          fill-opacity="0.5"
+          d="M0,96L0,160L40,160L40,32L80,32L80,224L120,224L120,128L160,128L160,224L200,224L200,128L240,128L240,192L280,192L280,256L320,256L320,192L360,192L360,224L400,224L400,192L440,192L440,96L480,96L480,256L520,256L520,32L560,32L560,256L600,256L600,96L640,96L640,96L680,96L680,128L720,128L720,64L760,64L760,96L800,96L800,0L840,0L840,192L880,192L880,96L920,96L920,128L960,128L960,32L1000,32L1000,32L1040,32L1040,32L1080,32L1080,160L1120,160L1120,64L1160,64L1160,160L1200,160L1200,64L1240,64L1240,192L1280,192L1280,224L1320,224L1320,96L1360,96L1360,192L1400,192L1400,128L1440,128L1440,320L1400,320L1400,320L1360,320L1360,320L1320,320L1320,320L1280,320L1280,320L1240,320L1240,320L1200,320L1200,320L1160,320L1160,320L1120,320L1120,320L1080,320L1080,320L1040,320L1040,320L1000,320L1000,320L960,320L960,320L920,320L920,320L880,320L880,320L840,320L840,320L800,320L800,320L760,320L760,320L720,320L720,320L680,320L680,320L640,320L640,320L600,320L600,320L560,320L560,320L520,320L520,320L480,320L480,320L440,320L440,320L400,320L400,320L360,320L360,320L320,320L320,320L280,320L280,320L240,320L240,320L200,320L200,320L160,320L160,320L120,320L120,320L80,320L80,320L40,320L40,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir skill -->
+
+    <!-- pengalaman -->
+    <section id="pengalaman" class="pengalaman">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Pengalaman Kerja</h2>
+            <br /><br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <a href="https://ibox.co.id/" target="_blank"><img src="img/ibox.png" class="card-img-top" alt="..." /></a>
+              <div class="card-body text-center">
+                <h5 class="card-title">Ecommerce Operational/Chanel Marketplace Supervisor</h5>
+                <p class="card-text">
+                  PT. Data Citra Mandiri <i>(Erajaya Group)</i><br />
+                  <a href="https://ibox.co.id/" target="_blank">www.ibox.co.id</a>
+                </p>
+                <p class="card-text"><small class="text-muted">2017 s/d 2022</small></p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#erajaya">Detil Pekerjaan</a>
+              </div>
+            </div>
+            <br />
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="erajaya" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Uraian Pekerjaan Chanel Marketplace Supervisor</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                      
+                    <li>Mengelola website utama perusahaan (www.ibox.co.id & www.eraspace.com) base Magento 1 & 2 dan Chanel Marketplace (Shopee & Tokopedia)</li>
+                    <li>Membuat website Landing Page Mingguan (html, php, bootstrap) untuk media promosi mingguan sebagai media marketing dan link iklan digital</li>
+                    <li>Membuat website untuk pre-order launching produk baru sebagai penampung database pre-order (PHP & MySQL)</li>
+                    <li>Update produk, harga, promo, foto, deskripsi dan stok barang di ecommerce ibox.co.id dan eraspace.com</li>
+                    <li>Melakukan pembaruan web baik dari segi desain maupun penambahan fitur dan koordinasi dengan team IT Support</li>
+                    <li>Memproses orderan masuk dan pengecekan pembayaran untuk diteruskan ke bagian gudang</li>
+                    <li>Membuat newsletter dan design web banner</li>
+                    <li>Menganalisa perkembangan ecommerce (www.ibox.co.id) dengan google traffic</li>
+                    <li>Mengelola blog wordpress, membuat page dan artikel tentang produk-produk Apple</li>
+                    <li>Monitoring stok barang di sistem dan kerja sama dengan staff gudang terkait persedian barang, retur barang serta perpindahan barang dari gudang toko ke gudang online.</li>
+                    <li>Monitoring pengiriman barang dari gudang ke customer</li>
+                    
+                    <li>
+                      Koordinasi dengan team media sosial dan desain grafis untuk campaign promo agar media promosi sejalan dengan deadline. Memastikan materi iklan (fb ads, instagram ads, detik.com) sesuai dengan campaign yang ada di
+                      website.
+                    </li>
+                    <li>Mengelola beberapa official store (nokia, erafone, UAG Aksesories, HyperDrive) di marketplace (shopee & tokopedia)</li>
+                    <li>Update stok barang dan upload produk baru ke beberapa platform marketplace (shopee & tokopedia)</li>
+                    <li>Membuat laporan penjualan untuk dikirim ke bagian divisi finance, marketing, dan product management</li>
+                    <li>Mengambil keputusan dengan cepat dan tepat jika terjadi masalah di ecommerce dengan koordinasi ke beberapa team terkait.</li>
+                    <li>Monitoring keluhan customer dan koordinasi dengan tim CS hingga tahap penyelesaian permasalah</li>
+                    <li>Kerjasama dengan Team Finance untuk proses refund uang, cancel order, pembayaran vendor</li>
+                    <li>Kerjasama dengan PM (Product Management) untuk penyediaan barang, stok, harga dan promosi yang akan berjalan di ecommerce dan marketplace</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <a href="https://danarhadistore.co.id/days/" target="_blank"><img src="img/danarhadi.png" class="card-img-top" alt="..." /></a>
+              <div class="card-body text-center">
+                <h5 class="card-title">Staff Ecommerce Operasional</h5>
+                <p class="card-text">
+                  PT. Batik Danar Hadi<br />
+                  <a href="https://danarhadistore.co.id/days/" target="_blank">www.danarhadistore.co.id</a>
+                </p>
+                <p class="card-text"><small class="text-muted">2016 s/d 2017</small></p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#danarhadi">Detil Pekerjaan</a>
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="danarhadi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Uraian Pekerjaan Staff Ecommerce Operasional</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Mencatat keluar masuk barang di gudang ecommerce</li>
+                    <li>Melayani komplen customer baik via telepon maupun email</li>
+                    <li>Melakukan pembaruan web baik dari segi desain maupun penambahan modul/plugin</li>
+                    <li>Menyiapkan barang untuk pemotretan tiap bulan dan kerja sama dengan agency model</li>
+                    <li>Mengedit foto SKU untuk di upload di web</li>
+                    <li>Mendeskripsikan barang yang akan di upload di web</li>
+                    <li>Mebuat newsletter dan design banner web dan media sosial</li>
+                    <li>Membuat laporan penjualan untuk dikirim ke bagian divisi keuangan</li>
+                    <li>Menganalisa perkembangan ecommerce dan google traffic serta update social media untuk melihat perkembangan trend pasar.</li>
+                    <li>Membuat promosi dengan kerja sama dengan beberapa pihak bank dan IT Gateway</li>
+                    <li>Melakukan pengepakan barang untuk dikirim ke customer</li>
+                    <li>Melakukan pengiriman barang ke pihak expedisi (JNE)</li>
+                    <li>Ikut partisipasi setiap ada event/fashion show perusahaan</li>
+                    <li>Kerjasama dengan Zalora untuk memasarkan produk dan meningkatkan penjualan.</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <a href="https://www.instagram.com/vipplazaid/" target="_blank"><img src="img/vipplaza.png" class="card-img-top" alt="..." /></a>
+              <div class="card-body text-center">
+                <h5 class="card-title">Web Content Officer</h5>
+                <p class="card-text">
+                  PT. VIP Plaza International <br />
+                  <a href="https://www.instagram.com/vipplazaid/" target="_blank">www.vipplaza.co.id</a>
+                </p>
+                <p class="card-text"><small class="text-muted">2014 s/d 2016</small></p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vipplaza">Detil Pekerjaan</a>
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="vipplaza" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Uraian Pekerjaan Web Content Officer</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Mengecek product list dari buyer dan merchandiser sebelum di input/di upload ke web ecommerce berbasis Magento</li>
+                    <li>Melakukan pembuatan file CSV yang di ambil dari product list sesuai target deadline penayangan content/produk di web</li>
+                    <li>Setelah selesai pengecekan dan pembuatan CSV, melakukan upload data ke web dan memastikan semua barang yang akan tayang dan turun dari web setiap harinya.</li>
+                    <li>Memasukan deskripsi produk dan foto produk ke web sesuai kode masing-masing produk berdasarkan tanggal event yang sudah ditentukan</li>
+                    <li>Memastikan produk-produk yang deadline bisa tayang di web sesuai dengan jadwal yang sudah ditetapkan.</li>
+                    <li>Melakukan pengecekan content web ecommerce setiap pagi</li>
+                    <li>Mengelola web ecommerce sesuai dengan deadline penayangan content web yang sudah dijadwalkan.</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <a href="https://www.impowerhouse.com/" target="_blank"><img src="img/impowerhouse.png" class="card-img-top" alt="..." /></a>
+              <div class="card-body text-center">
+                <h5 class="card-title">Staff SEO</h5>
+                <p class="card-text">PT. IM Power House<br /><a href="https://www.impowerhouse.com/" target="_blank">www.impowerhouse.com</a></p>
+                <p class="card-text"><small class="text-muted">2013 s/d 2014</small></p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#impower">Detil Pekerjaan</a>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="impower" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Uraian Pekerjaan Staff SEO</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Mencari artikel dalam bahasa inggris di ezinearticles.com sesuai dengan keyword yang diberikan konsumen dan melakukan spin artikel pada spinrewriter.com agar artikel berubah tidak seperti aslinya.</li>
+                    <li>
+                      Melakukan posting artikel pada wordpress dengan menyisipkan gambar yang sesuai dengan tema atikel serta video dari youtube yang sesuai dengan artikel yang dibahas menggunakan bahasa inggris. Dan link hasil posting
+                      tersebut dikumpulkan dalam notepad untuk laporan ke konsumen.
+                    </li>
+                    <li>Melakukan random link-link hasil postingan di wordpress pada software GSA Search Engine Ranker yang ada pada VPS (Virtual Private Server).</li>
+                    <li>Melakukan posting random artikel menggunakan software WikiRobot, Senuke XCR, dan RankBuilderNEO (Software-software/tools Search Engine Optimization (SEO)).</li>
+                    <li>Membuat laporan harian hasil posting menggunakan Ms. Excel untuk di delivery ke email konsumen.</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/tvri.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h5 class="card-title">Magang di TVRI</h5>
+                <p class="card-text">Divisi Pengembangan dan Produk Televisi Republik Indonesia (TVRI)</p>
+                <p class="card-text"><small class="text-muted">2013 (3 Bulan)</small></p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tvri">Detil Pekerjaan</a>
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="tvri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Magang di TVRI</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Membuat aplikasi android untuk memantau lokasi menara TVRI di seluruh Indonesia</li>
+                    <li>Membantu update website TVRI</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/kurir.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h5 class="card-title">Cleaning Service, SPB event, Kurir, Data Entry, Sales</h5>
+                <p class="card-text">Pekerja Lepas sambil Kuliah</p>
+                <p class="card-text"><small class="text-muted">2010 s/d 2013</small></p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detil Pekerjaan</a>
+              </div>
+            </div>
+            <br />
+          </div>
+          <br />
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Pekerjaan Lepas Sambil Kuliah</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>
+                      Cleaning Service : Jam masuk selepas kuliah sampai tutup toko. Membersihkan meja, lantai, dinding yang kotor. Mencuci piring kotor dan membersihkan sisa-sisa makan customer. Menyajikan pesanan ke meja customer dari
+                      koki dapur sesuai pesanan customer
+                    </li>
+                    <li>Data Entry : Setiap weekend, ikut event-event berbagai brand. Dengan tugas melakukan input ratusan data penjualan ke sistem sesuai invoice pembelian.</li>
+                    <li>Kurir : Mengirim pesanan makanan dari restoran ke customer sesuai alamat dengan tepat waktu. Jam kerja pulang kuliah sampai tutup restoran.</li>
+                    <li>
+                      SPB : Ikut event-event harian di Jakarta. Jam kerja setelah selesai jam kuliah sampai tutup Mall. Memberikan brosur ke customer/pengunjung dan mejelaskan fungsi dan keunggulan produk serta fasilitas yang di dapat,
+                      sampai customer tertarik untuk membeli.
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/gudang.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h5 class="card-title">Admin Gudang (Kuliah Sambil Kerja)</h5>
+                <p class="card-text">PT. Lifelon Jaya Makmur</p>
+                <p class="card-text"><small class="text-muted">2008 s/d 2010</small></p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lifelon">Detil Pekerjaan</a>
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="lifelon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Uraian Pekerjaan Admin Gudang</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Melakukan pencatatan pengeluaran barang tiap-tiap bagian divisi</li>
+                    <li>Melakukan pengecekan stok barang</li>
+                    <li>Melayani permintaan barang dari berbagai divisi</li>
+                    <li>Membuat catatan pembelian barang</li>
+                    <li>Melakukan PO barang</li>
+                    <li>Membuat laporan harian, mingguan, bulanan menggunakan Ms. Excel</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/desain.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h5 class="card-title">Desain Grafis</h5>
+                <p class="card-text">CV. Nexus Computer</p>
+                <p class="card-text"><small class="text-muted">2007 s/d 2008</small></p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#desain">Detil Pekerjaan</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="desain" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Uraian Pekerjaan Desain Grafis</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Membuat desain undangan sesuai permintaan customer dengan menggunakan aplikasi Coral Draw dan Photoshop</li>
+                    <li>Membuat desain brosur, kaos, spanduk, kartu nama sesuai permintaan desain dari customer</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir pengalaman -->
+
+    <!-- project -->
+    <section id="projek" class="projek">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Project</h2>
+            <p>Project pembuatan website yang pernah dikerjakan</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card text-center">
+              <img src="img/zeano.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h3>zeanococo</h3>
+                <br />
+                <a href="http://zeanococo.com/" target="_blank" class="btn btn-primary">Selengkapnya</a>
+              </div>
+            </div>
+            <br />
+          </div>
+          <div class="col-md-6">
+            <div class="card text-center">
+              <img src="img/peremeks.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h3>peremeks</h3>
+                <br />
+                <a href="https://www.peremeks.com/" target="_blank" class="btn btn-primary">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir projek -->
+
+    <!-- sosmed -->
+    <section id="sosmed" class="sosmed">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Media Sosial</h2>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-3 text-center">
+            <a href="https://www.instagram.com/bali_balbal/" target="_blank"><img src="img/ig.png" alt="foto-ambali" width="200" class="rounded-circle img-thumbnail" /></a><br /><br />
+          </div>
+         
+          <div class="col-md-3 text-center">
+            <a href="https://www.linkedin.com/in/ambali-balli-b47676124/" target="_blank"><img src="img/linked.png" alt="foto-ambali" width="200" class="rounded-circle img-thumbnail" /></a>
+          </div>
+          <div class="col-md-3 text-center">
+            <a href="https://www.youtube.com/@pupuha" target="_blank"><img src="img/youtube-pupuha.png" alt="youtube" width="200" class="rounded-circle img-thumbnail" /></a>
+          </div>
+          
+           <div class="col-md-3 text-center">
+            <a href="https://www.tiktok.com/@pupuhavocado" target="_blank"><img src="img/tiktok.png" alt="foto-ambali" width="200" class="rounded-circle img-thumbnail" /></a><br /><br />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir sosmed -->
+
+    <!-- kontak -->
+    <section id="kontak" class="kontak">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center mb-4">
+            <h2>Kontak</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+              </svg>
+              <b>Alamat :</b> Jl. Raya Sudamanik Kp Cilangkap RT 06/01 No. 58 Ds Lumpang Parung Panjang Bogor 16360
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path
+                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+                />
+              </svg>
+              <b>Email :</b> balibalbal@gmail.com
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path
+                  fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                />
+              </svg>
+              <b>No. HP : </b>089502877796
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-chrome" viewBox="0 0 16 16">
+                <path
+                  fill-rule="evenodd"
+                  d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                />
+              </svg>
+              <b>Website :</b> <a href="https://kukakuku.com/" target="_blank"> www.kukakuku.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#2f8f9d"
+          fill-opacity="1"
+          d="M0,128L0,0L53.3,0L53.3,288L106.7,288L106.7,160L160,160L160,128L213.3,128L213.3,160L266.7,160L266.7,96L320,96L320,64L373.3,64L373.3,256L426.7,256L426.7,192L480,192L480,288L533.3,288L533.3,64L586.7,64L586.7,160L640,160L640,96L693.3,96L693.3,128L746.7,128L746.7,224L800,224L800,192L853.3,192L853.3,96L906.7,96L906.7,288L960,288L960,224L1013.3,224L1013.3,256L1066.7,256L1066.7,224L1120,224L1120,160L1173.3,160L1173.3,192L1226.7,192L1226.7,0L1280,0L1280,64L1333.3,64L1333.3,0L1386.7,0L1386.7,96L1440,96L1440,320L1386.7,320L1386.7,320L1333.3,320L1333.3,320L1280,320L1280,320L1226.7,320L1226.7,320L1173.3,320L1173.3,320L1120,320L1120,320L1066.7,320L1066.7,320L1013.3,320L1013.3,320L960,320L960,320L906.7,320L906.7,320L853.3,320L853.3,320L800,320L800,320L746.7,320L746.7,320L693.3,320L693.3,320L640,320L640,320L586.7,320L586.7,320L533.3,320L533.3,320L480,320L480,320L426.7,320L426.7,320L373.3,320L373.3,320L320,320L320,320L266.7,320L266.7,320L213.3,320L213.3,320L160,320L160,320L106.7,320L106.7,320L53.3,320L53.3,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <footer class="footer text-center">
+      <p>
+        <i>Design and Develover By</i> <b>Ambali</b> & <b><a href="https://kukakuku.com/" target="_blank">Kukakuku.com</a></b> <br />2022
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
